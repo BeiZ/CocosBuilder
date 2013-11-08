@@ -566,7 +566,6 @@
 		E3D71E4B1669410800D9E638 /* defaultProjectResources in Resources */ = {isa = PBXBuildFile; fileRef = E3D71E4A1669410700D9E638 /* defaultProjectResources */; };
 		E3D839DC171356EC004F6127 /* pngquant in Resources */ = {isa = PBXBuildFile; fileRef = E3D839DA171356EC004F6127 /* pngquant */; };
 		E3D839DD171356EC004F6127 /* pngquant-COPYING in Resources */ = {isa = PBXBuildFile; fileRef = E3D839DB171356EC004F6127 /* pngquant-COPYING */; };
-		E3D839E01713A70D004F6127 /* nodejs in Resources */ = {isa = PBXBuildFile; fileRef = E3D839DF1713A70D004F6127 /* nodejs */; };
 		E3D839E31713A75B004F6127 /* JavaScriptSyntaxChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D839E21713A75B004F6127 /* JavaScriptSyntaxChecker.m */; };
 		E3DA6FEE16CAEC7800B12FFB /* SequencerPopoverHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DA6FED16CAEC7800B12FFB /* SequencerPopoverHandler.m */; };
 		E3DA6FF216CAF7D400B12FFB /* SequencerPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3DA6FF116CAF7D400B12FFB /* SequencerPopoverView.xib */; };
@@ -1782,7 +1781,6 @@
 		E3D71E4A1669410700D9E638 /* defaultProjectResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = defaultProjectResources; sourceTree = "<group>"; };
 		E3D839DA171356EC004F6127 /* pngquant */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pngquant; sourceTree = "<group>"; };
 		E3D839DB171356EC004F6127 /* pngquant-COPYING */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "pngquant-COPYING"; sourceTree = "<group>"; };
-		E3D839DF1713A70D004F6127 /* nodejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = nodejs; sourceTree = "<group>"; };
 		E3D839E11713A75B004F6127 /* JavaScriptSyntaxChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptSyntaxChecker.h; sourceTree = "<group>"; };
 		E3D839E21713A75B004F6127 /* JavaScriptSyntaxChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptSyntaxChecker.m; sourceTree = "<group>"; };
 		E3DA6FEC16CAEC7800B12FFB /* SequencerPopoverHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SequencerPopoverHandler.h; sourceTree = "<group>"; };
@@ -2526,7 +2524,6 @@
 			children = (
 				A77EF593171FD31400451DA4 /* WebP */,
 				835DAF7E171561B7003A2F7B /* CocoaHTTPServer */,
-				E3D839DF1713A70D004F6127 /* nodejs */,
 				E3D839DE171356F1004F6127 /* pngquant */,
 				E3A4745D16D4389D00DB0D61 /* CocosDenshion */,
 				E3E8D64316B3128600742107 /* Ogg compression */,
@@ -4711,7 +4708,6 @@
 				E334A4E6170D0020001604F7 /* debugger-bug.png in Resources */,
 				E3D839DC171356EC004F6127 /* pngquant in Resources */,
 				E3D839DD171356EC004F6127 /* pngquant-COPYING in Resources */,
-				E3D839E01713A70D004F6127 /* nodejs in Resources */,
 				E38F79361715FD8D00E299E4 /* editor-warning.png in Resources */,
 				E373BF1117189D2E00D71602 /* autoCompleteDefinitions in Resources */,
 				E3C12B1F171E0DE7001EEDDB /* editor-check.png in Resources */,
