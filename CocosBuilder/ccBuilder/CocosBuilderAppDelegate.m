@@ -259,6 +259,8 @@ static CocosBuilderAppDelegate* sharedAppDelegate;
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"ApplePersistenceIgnoreState"];
     [self.window center];
     
+    playbackLooping = NO;
+    
     selectedNodes = [[NSMutableArray alloc] init];
     loadedSelectedNodes = [[NSMutableArray alloc] init];
     
@@ -285,6 +287,16 @@ static CocosBuilderAppDelegate* sharedAppDelegate;
     defaultCanvasSizes[kCCBCanvasSizeAndroidMediumPortrait] = CGSizeMake(480, 800);
     
     [window setDelegate:self];
+    
+    // Load version file into version text field
+    NSString* versionPath = [[NSBundle mainBundle] pathForResource:@"Version" ofType:@"txt" inDirectory:@"version"];
+    
+    NSString* version = [NSString stringWithContentsOfFile:versionPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    if (version)
+        [window setTitle:[@"LolaBuilder - " stringByAppendingString:version]];
+    else
+        [window setTitle:@"LolaBuilder"];
     
     [self setupTabBar];
     [self setupInspectorPane];
@@ -1263,7 +1275,7 @@ static BOOL hideAllToNextSeparator;
     
     [[JavaScriptAutoCompleteHandler sharedAutoCompleteHandler] removeLocalFiles];
     
-    [window setTitle:@"CocosBuilder"];
+    [window setTitle:@"LolaBuilder"];
 
     // Stop local web server
     [[CCBHTTPServer sharedHTTPServer] stop];
@@ -1312,7 +1324,7 @@ static BOOL hideAllToNextSeparator;
     }
     
     // Update the title of the main window
-    [window setTitle:[NSString stringWithFormat:@"CocosBuilder - %@", [fileName lastPathComponent]]];
+    [window setTitle:[NSString stringWithFormat:@"LolaBuilder - %@", [fileName lastPathComponent]]];
 
     // Start local web server
     NSString* docRoot = [projectSettings.publishDirectoryHTML5 absolutePathFromBaseDirPath:[projectSettings.projectPath stringByDeletingLastPathComponent]];
@@ -3583,6 +3595,11 @@ static BOOL hideAllToNextSeparator;
     return currentDocument.undoManager;
 }
 
+- (IBAction) toggleLoop:(id) sender
+{
+    playbackLooping = (menuToggleLoop.state!=0);
+}
+
 #pragma mark Playback countrols
 
 - (void) playbackStep:(id) sender
@@ -3600,7 +3617,13 @@ static BOOL hideAllToNextSeparator;
         
         if (sequenceHandler.currentSequence.timelinePosition >= sequenceHandler.currentSequence.timelineLength)
         {
-            [self playbackStop:NULL];
+            if(playbackLooping)
+            {
+                sequenceHandler.currentSequence.timelinePosition = 0;
+                [self playbackStep:[NSNumber numberWithInt:1]];
+            }
+            else
+                [self playbackStop:NULL];
         }
         else
         {

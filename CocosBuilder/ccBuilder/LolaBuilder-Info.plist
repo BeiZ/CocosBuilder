@@ -32,9 +32,9 @@
 				<string>ccbproj</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>CocosBuilderProjectIcon.icns</string>
+			<string>LolaBuilderProjectIcon.icns</string>
 			<key>CFBundleTypeName</key>
-			<string>CocosBuilder Project</string>
+			<string>LolaBuilder Project</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>NSDocumentClass</key>
@@ -44,9 +44,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>Icon.icns</string>
+	<string>LolaBuilderIcon</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.cocosbuilder.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.beiz.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -54,11 +54,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>3.0</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3.0</string>
+	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.developer-tools</string>
 	<key>LSMinimumSystemVersion</key>
@@ -68,8 +68,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>SUFeedURL</key>
-	<string>http://cocosbuilder.com/downloads/updates.xml</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
+	<string>http://beiz.com/lolabuilder/updates.xml</string>
 </dict>
 </plist>

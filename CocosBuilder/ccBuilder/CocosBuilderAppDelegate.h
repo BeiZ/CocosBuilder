@@ -171,6 +171,8 @@ enum {
     IBOutlet NSMenuItem* menuItemChrome;
     IBOutlet NSMenuItem* menuItemFirefox;
     
+    IBOutlet NSButton* menuToggleLoop;
+    
     // Resource manager
     ResourceManager* resManager;
     //ResourceManagerPanel* resManagerPanel;
@@ -221,6 +223,7 @@ enum {
     
     // Animation playback
     BOOL playingBack;
+    BOOL playbackLooping;
     double playbackLastFrameTime;
     
     // JavaScript bindings

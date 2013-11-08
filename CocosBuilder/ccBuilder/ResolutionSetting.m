@@ -113,7 +113,7 @@
     setting.name = @"iPhone";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"iphone";
+    setting.ext = @"";
     setting.scale = 1;
     
     return setting;
@@ -170,8 +170,8 @@
     setting.name = @"iPad";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"ipad iphonehd";
-    setting.scale = 2;
+    setting.ext = @"";
+    setting.scale = 1;
     
     return setting;
 }
@@ -205,8 +205,8 @@
     setting.name = @"Android X-Small";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"xsmall";
-    setting.scale = 0.5f;
+    setting.ext = @"";
+    setting.scale = 1.0f;
     
     return setting;
 }
@@ -240,7 +240,7 @@
     setting.name = @"Android Small";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"small";
+    setting.ext = @"";
     setting.scale = 1;
     
     return setting;
@@ -275,8 +275,8 @@
     setting.name = @"Android Medium";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"medium";
-    setting.scale = 1.5f;
+    setting.ext = @"";
+    setting.scale = 1.0f;
     
     return setting;
 }
@@ -310,8 +310,8 @@
     setting.name = @"Android Large";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"large";
-    setting.scale = 2;
+    setting.ext = @"";
+    setting.scale = 1;
     
     return setting;
 }
@@ -345,8 +345,8 @@
     setting.name = @"Android X-Large";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"xlarge";
-    setting.scale = 4;
+    setting.ext = @"";
+    setting.scale = 1;
     
     return setting;
 }
@@ -380,8 +380,8 @@
     setting.name = @"HTML 5";
     setting.width = 0;
     setting.height = 0;
-    setting.ext = @"html5";
-    setting.scale = 2;
+    setting.ext = @"";
+    setting.scale = 1;
     
     return setting;
 }

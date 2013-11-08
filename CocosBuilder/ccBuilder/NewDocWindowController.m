@@ -38,14 +38,15 @@
 - (void) addFullScreenResolutions
 {
     // iOS resolutions
-    ResolutionSetting* iPhoneLandscape = [ResolutionSetting settingIPhoneLandscape];
-    iPhoneLandscape.enabled = YES;
-    [resolutionsController addObject:iPhoneLandscape];
+    ResolutionSetting* iPadLandscape = [ResolutionSetting settingIPadLandscape];
+    iPadLandscape.enabled = YES;
+    [resolutionsController addObject:iPadLandscape];
+    [resolutionsController addObject:[ResolutionSetting settingIPadPortrait]];
     [resolutionsController addObject:[ResolutionSetting settingIPhonePortrait]];
+    [resolutionsController addObject:[ResolutionSetting settingIPhoneLandscape]];
     [resolutionsController addObject:[ResolutionSetting settingIPhone5Landscape]];
     [resolutionsController addObject:[ResolutionSetting settingIPhone5Portrait]];
     [resolutionsController addObject:[ResolutionSetting settingIPadLandscape]];
-    [resolutionsController addObject:[ResolutionSetting settingIPadPortrait]];
     
     // Android resolutions
     [resolutionsController addObject:[ResolutionSetting settingAndroidXSmallLandscape]];
@@ -67,10 +68,10 @@
 - (void) addCustomSizeScreenResolutions
 {
     // iOS resolutions
-    ResolutionSetting* iPhone = [ResolutionSetting settingIPhone];
-    iPhone.enabled = YES;
-    [resolutionsController addObject:iPhone];
-    [resolutionsController addObject:[ResolutionSetting settingIPad]];
+    ResolutionSetting* iPad = [ResolutionSetting IPad];
+    iPad.enabled = YES;
+    [resolutionsController addObject:iPad];
+    [resolutionsController addObject:[ResolutionSetting settingIPhone]];
     
     // Android resolutions
     [resolutionsController addObject:[ResolutionSetting settingAndroidXSmall]];
