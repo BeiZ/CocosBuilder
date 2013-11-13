@@ -68,7 +68,7 @@
 - (void) addCustomSizeScreenResolutions
 {
     // iOS resolutions
-    ResolutionSetting* iPad = [ResolutionSetting IPad];
+    ResolutionSetting* iPad = [ResolutionSetting settingIPad];
     iPad.enabled = YES;
     [resolutionsController addObject:iPad];
     [resolutionsController addObject:[ResolutionSetting settingIPhone]];
